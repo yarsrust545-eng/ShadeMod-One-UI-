@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShadeMod для Samsung One UI"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Модуль LSPosed + KernelSU"
+            android:textSize="14sp"
+            android:alpha="0.75" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Анимация ползунков (как в iOS / HyperOS)"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchSliderAnim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Плавная пружинная анимация ползунка" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchSliderBounce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Эффект увеличения/отскока при касании" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Стиль анимации:"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rgAnimStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIosSpring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="iOS Fluid (мягкая пружина)" />
+
+                    <RadioButton
+                        android:id="@+id/rbHyperOs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HyperOS Bounce (выраженный отскок)" />
+
+                    <RadioButton
+                        android:id="@+id/rbPixelSmooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pixel Smooth (линейно-плавная)" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvSpeedLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Плавность анимации: 260 мс" />
+
+                <SeekBar
+                    android:id="@+id/seekAnimDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="500"
+                    android:progress="260" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Тест ползунка (потяните или нажмите):"
+                    android:textSize="13sp"
+                    android:alpha="0.8" />
+
+                <SeekBar
+                    android:id="@+id/seekPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:max="100"
+                    android:progress="60" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Настройки шторки One UI"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvColumnsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Плиток в ряду (0 = стандарт): 0" />
+
+                <SeekBar
+                    android:id="@+id/seekColumns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="8"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/tvAlphaLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Прозрачность фона шторки: 100%" />
+
+                <SeekBar
+                    android:id="@+id/seekShadeAlpha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="100" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchHideMediaDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Скрыть кнопки Device Control / Media Output" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRestartSystemUi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/restart_systemui"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>
